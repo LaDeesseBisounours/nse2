@@ -73,7 +73,9 @@ int main(void) {
     _mut.unlock();
     t.join();
 
-    std::cout << "res = " << res << std::endl;
+    std::cout << "time for total execution " << res << " µs" << std::endl;
+    std::cout << "time for one execution " << float(res) / float(NB_TEST)
+        << " µs" << std::endl;
 
     return 0;
 }
